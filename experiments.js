@@ -1,3 +1,7 @@
-const skyIsBlue = true;
+const skyIsBlue = !true;
 
-if ()
+if (skyIsBlue) {
+ console.log ("Hello, It's a good day today ig...")
+}else {
+ console.log("Shit it's gonna be a bad day to day unfortunatly....")
+}
