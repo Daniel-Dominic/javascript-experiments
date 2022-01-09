@@ -1,7 +1,11 @@
 const skyIsBlue = !true;
 
+let weather;
+
 if (skyIsBlue) {
- console.log ("Hello, It's a good day today ig...")
+ weather  = "Hello, It's a good day today ig...";
 }else {
- console.log("Shit it's gonna be a bad day to day unfortunatly....")
+ weather = "Shit it's gonna be a bad day today unfortunatly....";
 }
+
+console.log(weather);
