@@ -1,0 +1,15 @@
+* {
+ box-sizing: border-box;
+}
+
+*, *::after, *::before {
+ box-sizing: inherit;
+}
+
+.javascript {
+ border-radius: 1rem;
+}
+
+::placeholder {
+ color: black;
+}
