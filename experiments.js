@@ -1,5 +1,6 @@
-if (2 + "2" !== 5) {
- console.log("Maths still works!")
-} else {
- console.log("Uhhh, What will it be now!?")
-}
+let friendsAtYourParty = 0;
+
+friendsAtYourParty = friendsAtYourParty + 1;
+
+console.log(friendsAtYourParty)
+
