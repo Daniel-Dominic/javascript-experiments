@@ -1,9 +1,5 @@
-const friendsAtMyParty = 10;
+let friendsAtYourParty = 0;
 
-if (friendsAtMyParty === 0) {
- console.log("Cool, Now I have a lot of natchos to myself")
-} else if (friendsAtMyParty >= 4) {
- console.log("Nice amount of people to play Mario Kart")
-} else {
- console.log("turn on the dance music")
-}
+friendsAtYourParty = friendsAtYourParty + 1;
+
+console.log(friendsAtYourParty)
