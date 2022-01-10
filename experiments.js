@@ -1,6 +1,11 @@
-let friendsAtYourParty = 0;
+const cons = "Friends are Cool, ";
 
-friendsAtYourParty = friendsAtYourParty + 1;
+const timesToRepeat = 49;
 
-console.log(friendsAtYourParty)
+let sentence = ' ';
 
+for (let i = 0; i < timesToRepeat; i++){
+  sentence = sentence + cons; 
+}
+
+console.log(sentence + "Friends are Cool.")
