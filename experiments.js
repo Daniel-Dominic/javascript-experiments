@@ -1,11 +1,9 @@
-const skyIsBlue = !true;
+const friendsAtMyParty = 10;
 
-let weather;
-
-if (skyIsBlue) {
- weather  = "Hello, It's a good day today ig...";
-}else {
- weather = "Shit it's gonna be a bad day today unfortunatly....";
+if (friendsAtMyParty === 0) {
+ console.log("Cool, Now I have a lot of natchos to myself")
+} else if (friendsAtMyParty >= 4) {
+ console.log("Nice amount of people to play Mario Kart")
+} else {
+ console.log("turn on the dance music")
 }
-
-console.log(weather);
