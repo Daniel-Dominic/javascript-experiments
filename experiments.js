@@ -1,11 +1,7 @@
-const cons = "Friends are Cool, ";
-
-const timesToRepeat = 49;
-
-let sentence = ' ';
-
-for (let i = 0; i < timesToRepeat; i++){
-  sentence = sentence + cons; 
+function addTwo(number) {
+ return number + 3;
 }
 
-console.log(sentence + "Friends are Cool.")
+var finalAnswer = addTwo(5);
+
+console.log(finalAnswer);
