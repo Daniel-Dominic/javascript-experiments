@@ -1,7 +1,13 @@
-function addTwo(number) {
- return number + 3;
+function addString(string1, string2) {
+ return string1 + string2
 }
 
-var finalAnswer = addTwo(5);
+const timesToRepeat = 50;
 
-console.log(finalAnswer);
+let empty = '';
+
+for (let i = 0; i < timesToRepeat; i++) {
+ empty += addString("f", "f")
+}
+
+console.log(empty)
