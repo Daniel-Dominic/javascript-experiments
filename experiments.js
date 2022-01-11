@@ -1,25 +1,16 @@
-const timesToRepeat = 50;
+const variable = "f";
 
-let empty = '';
+const variable1 = "g"
 
-let number= "number";
+const timesToRepeat = "50";
 
-let number1 = number.length;
+let empty = "";
 
-function addString(string1, string2) {
- return string1 + string2
+let empty1 = "";
+
+for(let i = 0; i < timesToRepeat; i++) {
+ empty += variable
+ empty1 += variable1
 }
 
-let function1; 
-
-
-if (number1 == "6")
-for (let i = 0; i < timesToRepeat; i++) {
- empty += addString("f", "g")
-} else {
- for(let i = 0; i < timesToRepeat; i++){
-  empty += addString("s", "s")
- }
-}
-
-console.log(empty)
+console.log(empty + empty1)
