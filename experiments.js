@@ -13,4 +13,4 @@ for(let i = 0; i < timesToRepeat; i++) {
  empty1 += variable1
 }
 
-console.log(empty + empty1)
+console.log(`${empty} ${empty1}`)
