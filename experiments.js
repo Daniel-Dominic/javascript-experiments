@@ -1,12 +1,13 @@
-const [variable, variable1] = ["f", "g"];
+let homeCountry = "India";
+let homeState = "Kerala";
+let homeCity = "Kochi";
 
-const timesToRepeat = "50";
-
-let [empty, empty1] = ["", ""];
-
-for(let i = 0; i < timesToRepeat; i++) {
- empty += variable
- empty1 += variable1
+function homeSentance(city, state, country) {
+  return `I'm from ${country}, ${state}, ${city}. India is awesome.`; 
 }
 
-console.log(empty + empty1)
+homeCountry = "USA";
+homeState = "California";
+homeCity = "San Francisco";
+
+console.log(homeSentance(homeCity, homeState, homeCountry))
