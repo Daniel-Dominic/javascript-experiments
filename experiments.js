@@ -3,7 +3,8 @@ let homeState = "Kerala";
 let homeCity = "Kochi";
 
 function homeSentance(city, state, country) {
-  return `I'm from ${country}, ${state}, ${city}. India is awesome.`; 
+  let home = `I'm from ${country}, ${state}, ${city}. India is awesome.`;
+  return home; 
 }
 
 homeCountry = "USA";
