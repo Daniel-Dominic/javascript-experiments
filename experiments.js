@@ -1,13 +1,15 @@
-let homeCountry = "India";
-let homeState = "Kerala";
-let homeCity = "Kochi";
-
-function homeSentance(city, state, country) {
-  return `I'm from ${country}, ${state}, ${city}. India is awesome.`; 
+let something = "outside the function"
+let somethingElse;
+function thing() {
+  let something = "outside";
+if (true){
+  let something = "inside";
+  console.log(something)
+}
+console.log(something)
+somethingElse = "defined now";
 }
 
-homeCountry = "USA";
-homeState = "California";
-homeCity = "San Francisco";
-
-console.log(homeSentance(homeCity, homeState, homeCountry))
+thing()
+console.log(somethingElse)
+console.log(something)
