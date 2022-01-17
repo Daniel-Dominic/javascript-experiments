@@ -1,15 +1,23 @@
-let something = "outside the function"
-let somethingElse;
-function thing() {
-  let something = "outside";
-if (true){
-  let something = "inside";
-  console.log(something)
-}
-console.log(something)
-somethingElse = "defined now";
+const str = "F";
+
+const string = "G";
+
+function addString(str, string){
+ return str + string
 }
 
-thing()
-console.log(somethingElse)
-console.log(something)
+let timesToRepeat = 50;
+
+let empty = '';
+
+for (let i = 0; i < timesToRepeat; i++) {
+ empty += addString(str, string)
+}
+
+if ("FGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFG" === empty) {
+ console.log("working")
+} else {
+ console.log("Notworking")
+}
+
+console.log(empty)
