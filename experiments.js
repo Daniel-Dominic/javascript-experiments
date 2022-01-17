@@ -1,23 +1,11 @@
-const str = "F";
-
-const string = "G";
-
-function addString(str, string){
- return str + string
+let person = {
+ firstName: "Daniel",
+ lastName: "Dominic",
+ age: 13,
+ countryLivingIn: "India",
+ favoriteFood: "Pizza",
+ pizzaWantedRightNow: true,
+ numberOfPizzasWanted: 100
 }
 
-let timesToRepeat = 50;
-
-let empty = '';
-
-for (let i = 0; i < timesToRepeat; i++) {
- empty += addString(str, string)
-}
-
-if ("FGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFGFG" === empty) {
- console.log("working")
-} else {
- console.log("Notworking")
-}
-
-console.log(empty)
+console.log(person["firstName"])
