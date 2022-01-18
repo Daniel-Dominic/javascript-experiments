@@ -1,16 +1,25 @@
-const [vari1, vari2] = ["F", "G"]
-
-const timesToRepeat = 25;
-
-let [empty, empty1] =  ['', ''];
-
-for (let i = 0; i < timesToRepeat; i++) {
- empty += vari1;
- empty1 += vari2;
+const me = {
+ name: {
+  first: "Daniel",
+  last: "Dominic"
+ },
+ location: {
+  streetNumber: 500,
+  street: "Fakestreet",
+  city: "Seattle",
+  state: "WA",
+  zipCode: 5555,
+  country: "USA"
+ },
+ getAddress(){
+  return `${this.name.first } ${this.name.last} ${this.location.streetNumber} ${this.location.street}
+  ${this.location.city}, ${this.location.state} ${this.location.zipCode}
+  ${this.location.country}`
+ }
 }
 
-function addString(str1, str2) {
- return str1 + str2
-}
+// setTimeout(me.name.middle.toUpperCase(), 3000) 
 
-console.log(addString(empty, empty1));
+console.log(me.getAddress())
+
+console.log(window.scrollY)
