@@ -1,15 +1,22 @@
-const courses = [
- {teacher: "Kyle Simpson", course: "Deep JS Foundations"},
- {teacher: "Brian Holt", course: "Intro to Web Development"},
- {teacher: "Estelle Weyl", course: "CSS In-Depth"},
- {teacher: "Steve Kinney", course: "State Management"},
+// document.getElementById("text").innerHTML("Hello, World");
+
+let week = [
+ "monday",
+ "tuesday",
+ "wednesday",
+ "thrusday",
+ "friday",
+ "saturday",
+ "sunday"
 ]
 
-courses.push({teacher: "Sean Larkin", course: "Webpack"})
 
-var spliced = courses.splice(3, 2, {another: "course"});
+for (let i = 0; i < Math.ceil(6.5); i++) {
+ console.log(week[i])
+}
+
+let string = "hello world!";
+let capitalizedString = string[0].toUpperCase() + string.slice(1, 6) + string[6].toUpperCase() + string.slice(7, 12);
 
 
-console.log(courses)
-
-console.log(spliced)
+console.log(capitalizedString)
