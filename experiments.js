@@ -115,9 +115,9 @@ var result = strings.split(" ").map((string) => string.toUpperCase()).filter((st
 console.log(result)
 
 
-// const x = "this is some string";
+const x = "this is some string";
 
-// console.log(x.split(" ").map((string) => string.toUpperCase()).filter((string) => string !== 'I').join(" || "));
+console.log(x.split(" ").map((string) => string.toUpperCase()).filter((string) => string !== 'I').join(" || "));
 
 
 const x = 5;
