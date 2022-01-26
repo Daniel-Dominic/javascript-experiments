@@ -1,5 +1,11 @@
-// document.getElementById("text").innerHTML("Hello, World");
+let redBox = document.querySelectorAll('.green-box');
 
+redBox.style.backgroundColor = '#FF0000';
+redBox.style.width = '50%';
+redBox.style.border = '1rem solid blue';
+redBox.style.height = '300PX';
+
+//Makes an array of all the days of a week
 let week = [
  "Monday",
  "Tuesday",
@@ -9,12 +15,10 @@ let week = [
  "Saturday",
  "Sunday"
 ]
-console.log(week)
 
+let result = week.filter(function (week3) {return week3.length > 2});
 
-// let result = week.filter(function week3() {week3.length > 4});
-
-// console.log(result)
+console.log(result)
 
 for (let i = 0; i < Math.ceil(6.5); i++) {
  console.log(week[i])
@@ -110,17 +114,17 @@ var strings = "this is an array of strings";
 // var hell = strings.map((string) => string.toUpperCase()).sort();
 // console.log(hell);
 
-var result = strings.split(" ").map((string) => string.toUpperCase()).filter((string) => string !== 'I').join(" ");
+result = strings.split(" ").map((string) => string.toUpperCase()).filter(strings => strings != 'I').join(" ");
 
 console.log(result)
 
 
-const x = "this is some string";
+var x = "this is some string";
 
 console.log(x.split(" ").map((string) => string.toUpperCase()).filter((string) => string !== 'I').join(" || "));
 
 
-const x = 5;
+x = 5;
 
 const z = 11;
 
@@ -144,7 +148,7 @@ if (x === y ) {
 
 const sentance = "I think this is a test which we are gonna fail";
 
-const word = "rhink"
+const word = "think"
 
 const includesSentance = `The word "${word}" ${sentance.includes(word) ? "is" : "isn't"} in the sentance`
 
