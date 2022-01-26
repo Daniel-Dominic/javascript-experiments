@@ -2,7 +2,7 @@
 // For the boxes on top the page
 
 const box = document.querySelectorAll('.box')
-const input = document.querySelector('.color-typer')
+let input = document.querySelector('.color-typer')
 
 input.addEventListener("change", function() {
   box.style.backgroundColor = input.value;
@@ -10,17 +10,30 @@ input.addEventListener("change", function() {
 
 // --------------------------------------------------------------------------------------
 
+
+// For button alert
 document.querySelector('.button-group').addEventListener('click', function(event) {
   alert(`You've clicked ${event.target.innerText}`)
 })
+// ---------------------------------------------------------------------------------
 
+
+// For the js modificable text
 const tagToChange = document.querySelectorAll('.js-modifiable');
 for (let i = 0; i < tagToChange.length; i++) {
   const currentElement = tagToChange[i];
   currentElement.innerText = "This is changed by javascript";
 }
+// -----------------------------------------------------------------------------------------
 
-// ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+input = document.querySelector('.type-copier');
+const paragraph = document.querySelector('.text-to-copy');
+
+input.addEventListener("keyup", function() {
+  paragraph.innerText = input.value;
+});
+
+// Part of "Js DOM" ---------------------------------------------------------------------------------------------------------------------------------------------
 
 //Makes an array of all the days of a week
 let week = [
