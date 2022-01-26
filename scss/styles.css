@@ -1,6 +1,7 @@
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  padding: 0;
 }
 
 *, *::after, *::before {
@@ -8,23 +9,58 @@
           box-sizing: inherit;
 }
 
-.javascript {
-  border-radius: 1rem;
-}
-
 ::-webkit-input-placeholder {
-  color: black;
+  color: blue;
+  font-size: 1.5em;
 }
 
 :-ms-input-placeholder {
-  color: black;
+  color: blue;
+  font-size: 1.5em;
 }
 
 ::-ms-input-placeholder {
-  color: black;
+  color: blue;
+  font-size: 1.5em;
 }
 
 ::placeholder {
-  color: black;
+  color: blue;
+  font-size: 1.5em;
+}
+
+.unordered-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: block;
+}
+
+.top, .bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: row wrap;
+      flex-basis: row wrap;
+}
+
+.red-box {
+  background-color: red;
+  height: 100px;
+  margin: 5px;
+}
+
+.blue-box {
+  background-color: blue;
+  height: 100px;
+  margin: 5px;
+}
+
+.six-five {
+  width: 65%;
+}
+
+.three-five {
+  width: 35%;
 }
 /*# sourceMappingURL=styles.css.map */
