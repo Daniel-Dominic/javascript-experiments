@@ -1,9 +1,26 @@
-let redBox = document.querySelectorAll('.green-box');
+// Javascript on DOM
+// For the boxes on top the page
 
-redBox.style.backgroundColor = '#FF0000';
-redBox.style.width = '50%';
-redBox.style.border = '1rem solid blue';
-redBox.style.height = '300PX';
+const box = document.querySelectorAll('.box')
+const input = document.querySelector('.color-typer')
+
+input.addEventListener("change", function() {
+  box.style.backgroundColor = input.value;
+});
+
+// --------------------------------------------------------------------------------------
+
+document.querySelector('.button-group').addEventListener('click', function(event) {
+  alert(`You've clicked ${event.target.innerText}`)
+})
+
+const tagToChange = document.querySelectorAll('.js-modifiable');
+for (let i = 0; i < tagToChange.length; i++) {
+  const currentElement = tagToChange[i];
+  currentElement.innerText = "This is changed by javascript";
+}
+
+// ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 //Makes an array of all the days of a week
 let week = [
