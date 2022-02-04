@@ -1,11 +1,39 @@
 // Javascript on DOM
+
+// Changing face mole
+const mole = document.getElementById("mole");
+
+let isHungry = true;
+let nextTime = Date.now();
+function next() {
+  if (Date.now() > nextTime) {
+    if (isHungry) {
+      mole.src = "./mole/mole-sad.png"
+    } else {
+      mole.src = "./mole/mole-hungry.png"
+    } 
+    isHungry = !isHungry;
+    nextTime += 1000;
+  }
+  requestAnimationFrame(next)
+}
+next();
+// --------------------------------------------------------------------------------------
+
 // For the boxes on top the page
 
-const box = document.querySelectorAll('.box')
-let input = document.querySelector('.color-typer')
+let box = document.getElementsByClassName('.box-1')
+let input = document.querySelector('.color-typer-red')
 
 input.addEventListener("change", function() {
   box.style.backgroundColor = input.value;
+});
+
+let box1 = document.querySelector('.box')
+var input1 = document.querySelector('.color-typer-blue')
+
+input1.addEventListener("change", function() {
+  box1.style.backgroundColor = input1.value;
 });
 
 // --------------------------------------------------------------------------------------
@@ -25,17 +53,24 @@ for (let i = 0; i < tagToChange.length; i++) {
   currentElement.innerText = "This is changed by javascript";
 }
 // -----------------------------------------------------------------------------------------
+function eventEmptyExec() {
+if (input.value.length == 0) {
+  paragraph.innerText = "Nothing happened here."
+  }
+}
 
 input = document.querySelector('.type-copier');
 const paragraph = document.querySelector('.text-to-copy');
 
 input.addEventListener("keyup", function() {
   paragraph.innerText = input.value;
+  eventEmptyExec()
 });
+
 
 // Part of "Js DOM" ---------------------------------------------------------------------------------------------------------------------------------------------
 
-//Makes an array of all the days of a week
+// An array which contains all days of a week
 let week = [
  "Monday",
  "Tuesday",
