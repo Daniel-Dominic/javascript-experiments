@@ -1,5 +1,26 @@
 // Javascript on DOM
 
+const sI = document.querySelector('.sI')
+var raf = document.querySelector('.raf')
+
+var sIRepeat = 0;
+setInterval(function() {
+  sI.innerText = sIRepeat;
+  sIRepeat++
+}, 1000)
+
+var rafCount = 0;
+let runAgainAt = Date.now();
+function rafCounter() {
+  if (Date.now() > runAgainAt){
+  raf.innerHTML = rafCount;
+  rafCount++
+  runAgainAt += 1000
+  }
+  requestAnimationFrame(rafCounter)
+}
+requestAnimationFrame(rafCounter)
+
 // Changing face mole
 const mole = document.getElementById("mole");
 
@@ -11,7 +32,7 @@ function next() {
       mole.src = "./mole/mole-sad.png"
     } else {
       mole.src = "./mole/mole-hungry.png"
-    } 
+    }
     isHungry = !isHungry;
     nextTime += 1000;
   }
@@ -22,17 +43,17 @@ next();
 
 // For the boxes on top the page
 
-let box = document.getElementsByClassName('.box-1')
+let boxO1 = document.getElementsByClassName('red')
 let input = document.querySelector('.color-typer-red')
 
-input.addEventListener("change", function() {
-  box.style.backgroundColor = input.value;
+input.addEventListener("keyup", function() {
+  boxO1.style.backgroundColor = input.value;
 });
 
-let box1 = document.querySelector('.box')
+let box1 = document.querySelector('blue')
 var input1 = document.querySelector('.color-typer-blue')
 
-input1.addEventListener("change", function() {
+input1.addEventListener("keyup", function() {
   box1.style.backgroundColor = input1.value;
 });
 
@@ -40,14 +61,16 @@ input1.addEventListener("change", function() {
 
 
 // For button alert
-document.querySelector('.button-group').addEventListener('click', function(event) {
+document.querySelector('.button-group').addEventListener('click', function (event) {
+  if (event.target.tagName === 'BUTTON'){
   alert(`You've clicked ${event.target.innerText}`)
+}
 })
 // ---------------------------------------------------------------------------------
 
 
 // For the js modificable text
-const tagToChange = document.querySelectorAll('.js-modifiable');
+const tagToChange = document.getElementsByClassName('js-modifiable');
 for (let i = 0; i < tagToChange.length; i++) {
   const currentElement = tagToChange[i];
   currentElement.innerText = "This is changed by javascript";
@@ -183,7 +206,6 @@ result = strings.split(" ").map((string) => string.toUpperCase()).filter(strings
 
 console.log(result)
 
-
 var x = "this is some string";
 
 console.log(x.split(" ").map((string) => string.toUpperCase()).filter((string) => string !== 'I').join(" || "));
@@ -216,7 +238,7 @@ const sentance = "I think this is a test which we are gonna fail";
 const word = "think"
 
 const includesSentance = `The word "${word}" ${sentance.includes(word) ? "is" : "isn't"} in the sentance`
-
+  
 console.log(includesSentance)
 
 var arr = [3, 6, 2, 56, 32, 5, 89, 32];
@@ -246,3 +268,9 @@ var array1 = [1, 2, 3]
 for (let i = 0; i < array1.length; i++) {
   console.log(array1[i] * 2)
 }
+
+var num = 0;
+  setTimeout(function () { //Timeout only runs one time after the given timestamp. Interval runs infinitly
+  num++
+  return console.log(num)
+}, 1000)
