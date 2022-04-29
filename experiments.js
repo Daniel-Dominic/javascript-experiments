@@ -1,5 +1,20 @@
 // Javascript on DOM
 
+// Element Definer
+
+function identifier(event) {
+  console.log(event.target)
+}
+
+// ------------------------------------------------------------------
+
+// Create a element dynamically
+
+const custiomDiv = document.createElement("div");
+
+custiomDiv.innerText = "created Dynamically"
+
+// Difference between requestAnimationFrame and setInterval
 const sI = document.querySelector('.sI')
 var raf = document.querySelector('.raf')
 
@@ -20,25 +35,20 @@ function rafCounter() {
   requestAnimationFrame(rafCounter)
 }
 requestAnimationFrame(rafCounter)
+// --------------------------------------------------------------------------
 
 // Changing face mole
 const mole = document.getElementById("mole");
 
 let isHungry = true;
-let nextTime = Date.now();
-function next() {
-  if (Date.now() > nextTime) {
-    if (isHungry) {
-      mole.src = "./mole/mole-sad.png"
-    } else {
-      mole.src = "./mole/mole-hungry.png"
-    }
-    isHungry = !isHungry;
-    nextTime += 1000;
+setInterval(function (){
+  if (isHungry) {
+    mole.src = "/mole/mole-hungry.png"
+  } else {
+    mole.src = "/mole/mole-sad.png"
   }
-  requestAnimationFrame(next)
-}
-next();
+  isHungry = !isHungry
+}, 1000)
 // --------------------------------------------------------------------------------------
 
 // For the boxes on top the page
@@ -76,22 +86,28 @@ for (let i = 0; i < tagToChange.length; i++) {
   currentElement.innerText = "This is changed by javascript";
 }
 // -----------------------------------------------------------------------------------------
+input = document.querySelector('.type-copier');
+const paragraph = document.querySelector('.text-to-copy');
+
 function eventEmptyExec() {
 if (input.value.length == 0) {
   paragraph.innerText = "Nothing happened here."
   }
 }
 
-input = document.querySelector('.type-copier');
-const paragraph = document.querySelector('.text-to-copy');
-
 input.addEventListener("keyup", function() {
   paragraph.innerText = input.value;
   eventEmptyExec()
 });
 
-
 // Part of "Js DOM" ---------------------------------------------------------------------------------------------------------------------------------------------
+
+// Two variables with one var, let or const
+
+var variable1, variable2;
+
+variable1 = 1;
+variable2 = 2;
 
 // An array which contains all days of a week
 let week = [
@@ -273,4 +289,17 @@ var num = 0;
   setTimeout(function () { //Timeout only runs one time after the given timestamp. Interval runs infinitly
   num++
   return console.log(num)
-}, 1000)
+}, 1000);
+
+identifier();
+
+var arr = [1, 23, 5, 7, 8, 9]
+let b = 0; 
+let c = 0;
+
+for (let i = 0; i < arr.length; i++) {
+     b = arr[i];
+    c = c + b;
+}
+
+console.log(c)
